@@ -1,14 +1,16 @@
 module.exports = {
+  pathPrefix: `/blog`,
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `szaklog`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `szak/Eggngineer`,
+      summary: `: クソザコ理系大学院生`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `情報系院生のオレオレブログ`,
+    siteUrl: `https://eggngineer.github.io/blog/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `E_gg_ngineer`,
+      github: `Eggngineer`,
     },
   },
   plugins: [
