@@ -20,6 +20,7 @@ const Bio = () => {
           }
           social {
             twitter
+            github
           }
         }
       }
@@ -36,19 +37,47 @@ const Bio = () => {
         className="bio-avatar"
         layout="fixed"
         formats={["auto", "webp", "avif"]}
-        src="../images/profile-pic.png"
-        width={50}
-        height={50}
-        quality={95}
+        src="../images/eggngineer.png"
+        width={90}
+        height={90}
+        quality={100}
         alt="Profile picture"
       />
       {author?.name && (
         <p>
-          Written by <strong>{author.name}</strong> {author?.summary || null}
+          <strong>{author.name}</strong> {author?.summary || null}
           {` `}
+          <br />
+          <div class="wrap">
+          <div>
           <a href={`https://twitter.com/${social?.twitter || ``}`}>
-            You should follow them on Twitter
+            <StaticImage
+              className="bio-avatar"
+              layout="constrained"
+              formats={["auto", "webp", "avif"]}
+              src="../images/twitter_logo.png"
+              width={50}
+              height={50}
+              quality={100}
+              alt="Profile picture"
+            />
           </a>
+          </div>
+          <div>
+          <a href={`https://github.com/${social?.github || ``}`}>
+            <StaticImage
+              className="bio-avatar"
+              layout="constrained"
+              formats={["auto", "webp", "avif"]}
+              src="../images/github_logo.png"
+              width={50}
+              height={50}
+              quality={100}
+              alt="Profile picture"
+            />
+          </a>
+          </div>
+          </div>
         </p>
       )}
     </div>
